@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ article.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        </div>
+        <h2>Badan Kesatuan Bangsa dan Politik</h2>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="article-content">
+            <h1>{{ article.title }}</h1>
+            <p class="meta">{{ article.date }} | By {{ article.author }}</p>
+            <p class="category">{{ article.category }}</p>
+            
+            <div class="article-body">
+                <div class="article-image {{ 'landscape' if article.image_orientation == 'landscape' else 'portrait' }}">
+                    <img src="{{ article.image }}" alt="{{ article.title }}">
+                </div>
+                <div class="article-text">
+                    <p>{{ article.content }}</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Footer Logo" class="footer-logo">
+            <div class="footer-text">
+                <p>Badan Kesatuan Bangsa dan Politik</p>
+                <p>&copy; 2024 News Website. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

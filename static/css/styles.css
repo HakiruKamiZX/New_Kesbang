@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #558C8C; /* Example background color */
+    border-bottom: 1px solid #ffffff;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    position: relative;
+    color: #000000; /* Example color */
+    font-weight: bold;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+main {
+    padding: 20px;
+    margin-top: 20px; /* Ensure margin is applied to the main section */
+}
+
+/* Dropdown Menu */
+
+.dropdown-content {
+    display: block; /* Start with display: block to avoid flickering */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0; /* Aligns the dropdown to the right edge of the parent */
+    opacity: 0; /* Start with hidden opacity */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for fade effect */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap; /* Prevents text from wrapping */
+    transition: background-color 0.3s ease; /* Adds hover animation */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1; /* Fade in effect */
+    visibility: visible; /* Ensure it becomes visible */
+}
+
+/* Ensure that the dropdown is not visible when not hovering */
+.dropdown {
+    position: relative; /* Needed for absolute positioning of the dropdown-content */
+}
+
+/* Styles for Biographic Section */
+
+#biographic {
+    margin-top: 20px; /* Space above the biographic section */
+    margin-bottom: 40px; /* Space below the biographic section */
+    padding: 0 20px; /* Add horizontal padding if desired */
+}
+
+.bio-container {
+    width: 100%;
+    max-width: 100vw; /* Ensures it fills the entire viewport width */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevents overflow of rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    background-color: #f9f9f9; /* Background color of the container */
+}
+
+.bio-image-container {
+    width: 100%;
+}
+
+.bio-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bio-text {
+    padding: 20px;
+    text-align: center;
+}
+
+.bio-text h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.bio-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    text-align: justify;
+}
+
+
+/*News Part*/
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40 px;
+}
+
+.news-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    margin-block-end: 40px;
+}
+
+#news-articles {
+    margin-bottom: 40px; /* Adds space below the news section */
+}
+
+.news-item:nth-child(odd) {
+    flex-direction: row-reverse; /* Image on the right for odd items */
+}
+
+.news-item:nth-child(even) {
+    flex-direction: row; /* Image on the left for even items */
+}
+
+.news-image {
+    flex: 1;
+    height: auto;
+    background-color: #e0e0e0;
+    background-size: cover;
+    background-position: center;
+}
+
+.news-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.meta {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.category {
+    font-size: 14px;
+    color: #ff6347;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* General Styles for Forms */
+.news-form-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.news-form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.news-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-form-container label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.news-form-container input,
+.news-form-container textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.news-form-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.news-form-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Section */
+
+footer {
+    background-color: #558C8C; /* Set background color */
+    padding: 10px; /* Adjust padding */
+    color: #fff; /* Set text color */
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.footer-logo {
+    max-width: 75px;
+    margin-right: 10px;
+}
+
+.footer-text p {
+    margin: 5px 0; 
+    color: #fff; /* Ensure text color */
+}
+
+.footer-text {
+    text-align: center; 
+}
+
+/* READ MORE ARTICLE*/
+
+.article-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.article-image.landscape {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.article-image.portrait {
+    width: 40%;
+    margin: 0 20px 20px 0;
+    float: left;
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+}
+
+.article-text {
+    width: 100%;
+}
+
+.article-text p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* MAP AREA*/
+
+#map-section {
+    padding: 20px;
+    background-color: #f5f5f5; /* Background color for the map section */
+    text-align: center;
+    margin-top: 40px; /* Adjust this value to add space between the news section and the map section */
+}
+
+#map-section h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+#map-container {
+    max-width: 1000px; /* Set a maximum width for the map */
+    margin: 0 auto; /* Center the map container */
+    position: relative; /* Required for the aspect ratio */
+    overflow: hidden; /* Ensures map fits within the container */
+}
+
+iframe {
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Fixed height for rectangular shape */
+    border: none;
+    border-radius: 8px; /* Optional: rounded corners */
+    display: block; /* Ensures iframe takes up the full height */
+}
+
+/* Slide In from Bottom with Fade */
+.slide-in {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.slide-in.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+

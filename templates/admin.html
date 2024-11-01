@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+                <h2>Admin Dashboard</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/settings"><i class="material-icons">settings</i> Settings</a></li>
+                    <li><a href="/add_account"><i class="material-icons">person_add</i> Add Account</a></li>
+                    <li><a href="/monitor_active_account"><i class="material-icons">group</i> Monitor Active Accounts</a></li>
+                    <li><a href="/modify_active_account"><i class="material-icons">edit</i> Modify Active Accounts</a></li>                    
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Overview</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for something">
+                    <button type="submit"> <i class="material-icons"> search </i></button>
+                </div>
+                <div class="user-profile">
+                    <i class="material-icons">person</i>
+                </div>
+            </header>
+            <section class="dashboard-overview">
+                <div class="card">
+                    <h3>My Cards</h3>
+                    <!-- Add card details here -->
+                </div>
+                <div class="transactions">
+                    <h3>Recent Transactions</h3>
+                    <!-- Add transaction details here -->
+                </div>
+                <div class="stats">
+                    <h3>Expense Statistics</h3>
+                    <!-- Add statistics here -->
+                </div>
+            </section>
+            <!-- Additional content or features can be added here -->
+        </main>
+    </div>
+</body>
+</html>
